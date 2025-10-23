@@ -1,5 +1,24 @@
+import { Link, useNavigate } from 'react-router-dom';
+import Logo from './Logo';
+
 const Navbar = () => {
-  return <nav className='bg-gray-800 text-white p-4'>Navbar</nav>;
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('isLoggedIn');
+    setTimeout(() => {
+      navigate('/login');
+    }, 750);
+  };
+
+  return (
+    <nav className='flex items-center justify-between py-4 px-32'>
+      <Logo />
+      <div>
+        <button onClick={handleLogout}>Logout</button>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
