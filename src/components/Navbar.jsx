@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 import { PiHeartDuotone, PiMoonDuotone, PiSunDuotone } from 'react-icons/pi';
+import { MdLogout } from 'react-icons/md';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -21,19 +22,22 @@ const Navbar = () => {
       <div className='flex items-center gap-8'>
         <div className='flex gap-1'>
           <button>
-            <PiHeartDuotone className='w-7 h-7 hover:text-gray-950 transition' />
+            <PiHeartDuotone className='w-6 h-6 md:w-7 md:h-7 hover:text-gray-950 transition' />
           </button>
           <button>
-            <PiMoonDuotone className='dark:hidden w-7 h-7 hover:text-gray-950 transition' />
+            <PiMoonDuotone className='dark:hidden w-6 h-6 md:w-7 md:h-7 hover:text-gray-950 transition' />
           </button>
           <button>
-            <PiSunDuotone className='hidden dark:block w-7 h-7 hover:text-gray-950 transition' />
+            <PiSunDuotone className='hidden dark:block w-6 h-6 md:w-7 md:h-7 hover:text-gray-950 transition' />
+          </button>
+          <button onClick={handleLogout}>
+            <MdLogout className='md:hidden w-6 h-6 md:w-7 md:h-7 hover:text-gray-950 transition' />
           </button>
         </div>
 
         <button
           onClick={handleLogout}
-          className='px-8 py-2 text-sm bg-indigo-950 hover:opacity-90 text-white rounded-full'
+          className='hidden md:block px-8 py-2 text-sm bg-indigo-950 hover:opacity-90 text-white rounded-full'
         >
           Log Out
         </button>
