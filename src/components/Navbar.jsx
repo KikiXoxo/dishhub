@@ -2,9 +2,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 import { PiHeartDuotone, PiMoonDuotone, PiSunDuotone } from 'react-icons/pi';
 import { MdLogout } from 'react-icons/md';
+import { useThemeStore } from '../stores/themeStore';
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const { toggleTheme } = useThemeStore();
 
   const handleLogout = () => {
     localStorage.removeItem('isLoggedIn');
@@ -24,11 +26,11 @@ const Navbar = () => {
           <button>
             <PiHeartDuotone className='w-6 h-6 md:w-7 md:h-7 hover:text-gray-950 transition' />
           </button>
-          <button>
-            <PiMoonDuotone className='dark:hidden w-6 h-6 md:w-7 md:h-7 hover:text-gray-950 transition' />
+          <button onClick={toggleTheme} className='dark:hidden'>
+            <PiMoonDuotone className='w-6 h-6 md:w-7 md:h-7 hover:text-gray-950 transition' />
           </button>
-          <button>
-            <PiSunDuotone className='hidden dark:block w-6 h-6 md:w-7 md:h-7 hover:text-gray-950 transition' />
+          <button onClick={toggleTheme} className='hidden dark:block'>
+            <PiSunDuotone className=' w-6 h-6 md:w-7 md:h-7 hover:text-gray-950 transition' />
           </button>
           <button onClick={handleLogout}>
             <MdLogout className='md:hidden w-6 h-6 md:w-7 md:h-7 hover:text-gray-950 transition' />
