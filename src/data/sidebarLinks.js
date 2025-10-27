@@ -3,7 +3,7 @@ import { MdDashboard, MdCategory } from 'react-icons/md';
 const sidebarLinks = [
   {
     name: 'Discover',
-    path: '/dashboard',
+    path: '/discover',
     icon: MdDashboard,
   },
   {

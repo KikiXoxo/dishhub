@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
     localStorage.setItem('isLoggedIn', 'true');
     setTimeout(() => {
-      navigate('/dashboard');
+      navigate('/discover');
     }, 750);
   };
 
