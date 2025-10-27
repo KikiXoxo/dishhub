@@ -3,7 +3,7 @@ import RootLayout from '../layouts/RootLayout';
 import AuthLayout from '../layouts/AuthLayout';
 import DashboardLayout from '../layouts/DashboardLayout';
 import Login from '../pages/Login';
-import Dashboard from '../pages/Dashboard';
+import Discover from '../pages/Discover';
 
 const router = createBrowserRouter([
   // Redirect route
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     path: '/',
     loader: () => {
       const isLoggedIn = localStorage.getItem('isLoggedIn');
-      return redirect(isLoggedIn ? '/dashboard' : '/login');
+      return redirect(isLoggedIn ? '/discover' : '/login');
     },
   },
 
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
           }
           return null;
         },
-        children: [{ path: 'dashboard', element: <Dashboard /> }],
+        children: [{ path: 'discover', element: <Discover /> }],
       },
     ],
   },
