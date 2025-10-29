@@ -15,7 +15,7 @@ const DashboardLayout = () => {
         <div className='flex-1 p-6 ml-64 bg-white dark:text-gray-100 dark:bg-gray-900 min-h-full transition relative '>
           {/* Display spinner when main content is still loading */}
           {isLoading && (
-            <div className='absolute inset-0 z-50 flex items-center justify-center bg-white dark:bg-gray-900'>
+            <div className='absolute inset-0 z-50 flex items-start justify-center bg-white dark:bg-gray-900'>
               <Spinner />
             </div>
           )}
