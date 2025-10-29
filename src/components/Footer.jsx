@@ -5,7 +5,7 @@ import { RiInstagramFill } from 'react-icons/ri';
 
 const Footer = () => {
   return (
-    <footer className='relative p-8 md:px-16 lg:px-20 py-3 flex flex-col gap-4 justify-center md:flex-row items-center justify-between bg-gray-100 text-gray-800 dark:bg-gray-950 dark:text-gray-100 md:h-20 transition z-5'>
+    <footer className='w-screen relative p-8 md:px-16 lg:px-20 py-3 flex flex-col gap-4 justify-center md:flex-row items-center justify-between bg-gray-100 text-gray-800 dark:bg-gray-950 dark:text-gray-100 md:h-20 transition z-5'>
       <div className='hidden md:block'>
         <Logo />
         <p className=' text-xs font-semibold'>

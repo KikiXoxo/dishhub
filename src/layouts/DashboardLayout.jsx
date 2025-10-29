@@ -10,7 +10,7 @@ const DashboardLayout = () => {
   return (
     <div className='h-full'>
       <Navbar />
-      <div className='flex h-full pt-[64px] md:pt-[70px]'>
+      <div className='flex h-full pt-[64px] md:pt-[70px] w-screen'>
         <Sidebar />
         <div className='flex-1 p-6 ml-64 bg-white dark:text-gray-100 dark:bg-gray-900 min-h-full transition relative '>
           {/* Display spinner when main content is still loading */}
