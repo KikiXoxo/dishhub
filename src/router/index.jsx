@@ -4,6 +4,7 @@ import AuthLayout from '../layouts/AuthLayout';
 import DashboardLayout from '../layouts/DashboardLayout';
 import Login from '../pages/Login';
 import Discover from '../pages/Discover';
+import { discoverLoader } from '../loaders/discoverLoader';
 
 const router = createBrowserRouter([
   // Redirect route
@@ -33,7 +34,9 @@ const router = createBrowserRouter([
           }
           return null;
         },
-        children: [{ path: 'discover', element: <Discover /> }],
+        children: [
+          { path: 'discover', element: <Discover />, loader: discoverLoader },
+        ],
       },
     ],
   },
