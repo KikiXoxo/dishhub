@@ -20,7 +20,7 @@ const Discover = () => {
               image={meal.strMealThumb}
               title={meal.strMeal}
               description={meal.strInstructions}
-              to={`/meal/${meal.idMeal}`}
+              to={`/meals/${meal.idMeal}`}
             />
           ))}
         </GridContainer>

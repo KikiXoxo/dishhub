@@ -1,20 +1,20 @@
-import { MdDashboard, MdCategory } from 'react-icons/md';
+import { GiHamburger, GiDonut, GiCarrot } from 'react-icons/gi';
 
 const sidebarLinks = [
   {
     name: 'Discover',
     path: '/discover',
-    icon: MdDashboard,
+    icon: GiDonut,
   },
   {
     name: 'Categories',
     path: '/categories',
-    icon: MdCategory,
+    icon: GiHamburger,
   },
   {
     name: 'Ingredients',
     path: '/ingredients',
-    icon: MdCategory,
+    icon: GiCarrot,
   },
 ];
 

@@ -7,6 +7,9 @@ import Discover from '../pages/Discover';
 import { discoverLoader } from '../loaders/discoverLoader';
 import Categories from '../pages/Categories';
 import Ingredients from '../pages/Ingredients';
+import MealDetails from '../pages/MealDetails';
+import CategoryDetails from '../pages/CategoryDetails';
+import IngredientDetails from '../pages/IngredientDetails';
 
 const router = createBrowserRouter([
   // Redirect route
@@ -47,8 +50,20 @@ const router = createBrowserRouter([
             element: <Categories />,
           },
           {
+            path: 'categories/:category',
+            element: <CategoryDetails />,
+          },
+          {
             path: 'ingredients',
             element: <Ingredients />,
+          },
+          {
+            path: 'ingredients/:ingredient',
+            element: <IngredientDetails />,
+          },
+          {
+            path: 'meals/:id',
+            element: <MealDetails />,
           },
         ],
       },
