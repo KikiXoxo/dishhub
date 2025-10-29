@@ -3,8 +3,8 @@ import Footer from '../components/Footer';
 
 const RootLayout = () => {
   return (
-    <div className='min-h-screen grid grid-rows-[1fr_auto] w-screen'>
-      <main className='h-full '>
+    <div className='min-h-screen grid grid-rows-[1fr_auto]'>
+      <main className='h-full'>
         <Outlet />
       </main>
       <Footer />
