@@ -8,7 +8,12 @@ const sidebarLinks = [
   },
   {
     name: 'Categories',
-    path: '/dashboard/categories',
+    path: '/categories',
+    icon: MdCategory,
+  },
+  {
+    name: 'Ingredients',
+    path: '/ingredients',
     icon: MdCategory,
   },
 ];
