@@ -5,7 +5,11 @@ const Card = ({ image, title, description, to }) => {
   return (
     <Link to={to} className='block'>
       <div className='bg-sky-50 dark:bg-gray-800 shadow rounded-2xl overflow-hidden transition hover:shadow-lg dark:hover:bg-gray-950'>
-        <img src={image} alt={title} className='w-full h-48 object-cover' />
+        <img
+          src={image}
+          alt={title}
+          className='w-full h-40 md:h-32 lg:h-48 object-cover'
+        />
         <div className='p-4'>
           <h3 className='text-lg font-semibold mb-2 line-clamp-1 text-gray-900 dark:text-gray-100'>
             {title}

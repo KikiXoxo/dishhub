@@ -64,7 +64,7 @@ const Discover = () => {
           </p>
         </div>
         <GridContainer>
-          {ingredients.slice(1, 4).map(ing => (
+          {ingredients.slice(1, 5).map(ing => (
             <Card
               key={ing.idIngredient}
               image={ing.strThumb}

@@ -3,7 +3,7 @@ import sidebarLinks from '../data/sidebarLinks';
 
 const Sidebar = () => {
   return (
-    <aside className='fixed top-[64px] md:top-[70px] left-0 bottom-0 w-64 bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-100 p-4 overflow-y-auto transition z-2'>
+    <aside className='fixed top-[64px] md:top-[70px] left-0 bottom-0 w-48 lg:w-64 bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-100 p-4 overflow-y-auto transition z-2'>
       <nav className='space-y-2'>
         {sidebarLinks.map(({ name, path, icon: Icon }) => (
           <NavLink
