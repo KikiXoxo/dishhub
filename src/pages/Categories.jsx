@@ -1,6 +1,7 @@
 import { useLoaderData } from 'react-router-dom';
 import Card from '../components/Card';
 import GridContainer from '../components/GridContainer';
+import { DISPLAY_LIMIT } from '../constants';
 
 const Categories = () => {
   const { categories } = useLoaderData();
@@ -16,7 +17,7 @@ const Categories = () => {
         </div>
 
         <GridContainer>
-          {categories.slice(0, 30).map(cat => (
+          {categories.slice(0, DISPLAY_LIMIT).map(cat => (
             <Card
               key={cat.idCategory}
               image={cat.strCategoryThumb}

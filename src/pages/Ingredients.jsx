@@ -1,6 +1,7 @@
 import { useLoaderData } from 'react-router-dom';
 import Card from '../components/Card';
 import GridContainer from '../components/GridContainer';
+import { DISPLAY_LIMIT } from '../constants';
 
 const Ingredients = () => {
   const { ingredients } = useLoaderData();
@@ -16,7 +17,7 @@ const Ingredients = () => {
         </div>
 
         <GridContainer>
-          {ingredients.slice(0, 30).map(ing => (
+          {ingredients.slice(0, DISPLAY_LIMIT).map(ing => (
             <Card
               key={ing.idIngredient}
               image={ing.strThumb}
