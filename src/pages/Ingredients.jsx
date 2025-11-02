@@ -22,7 +22,7 @@ const Ingredients = () => {
               image={ing.strThumb}
               title={ing.strIngredient}
               description={ing.strDescription}
-              to={`/ingredients/${ing.strIngredient}`}
+              to={`/ingredients/${encodeURIComponent(ing.strIngredient)}`}
             />
           ))}
         </GridContainer>
