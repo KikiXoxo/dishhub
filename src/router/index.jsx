@@ -8,6 +8,7 @@ import { discoverLoader } from '../loaders/discoverLoader';
 import Categories from '../pages/Categories';
 import { categoriesLoader } from '../loaders/categoriesLoader';
 import Ingredients from '../pages/Ingredients';
+import { ingredientsLoader } from '../loaders/ingredientsLoader';
 import MealDetails from '../pages/MealDetails';
 import CategoryDetails from '../pages/CategoryDetails';
 import IngredientDetails from '../pages/IngredientDetails';
@@ -58,6 +59,7 @@ const router = createBrowserRouter([
           {
             path: 'ingredients',
             element: <Ingredients />,
+            loader: ingredientsLoader,
           },
           {
             path: 'ingredients/:ingredient',
