@@ -1,4 +1,6 @@
 import api from '../api/api';
+import { categoriesLoader } from './categoriesLoader';
+import { ingredientsLoader } from './ingredientsLoader';
 
 export const discoverLoader = async () => {
   try {
@@ -7,16 +9,16 @@ export const discoverLoader = async () => {
     const randomResponses = await Promise.all(randomRequests);
     const featuredMeals = randomResponses.map(r => r.data.meals[0]);
 
-    // Fetch categories and ingredients
-    const [categoriesResponse, ingredientsResponse] = await Promise.all([
-      api.get('/categories.php'),
-      api.get('/list.php?i=list'),
+    // Fetch categories and ingredients using imported loaders
+    const [{ categories }, { ingredients }] = await Promise.all([
+      categoriesLoader(),
+      ingredientsLoader(),
     ]);
 
     return {
       featuredMeals,
-      categories: categoriesResponse.data.categories,
-      ingredients: ingredientsResponse.data.meals,
+      categories,
+      ingredients,
     };
   } catch (error) {
     console.error('Discover loader error:', error);

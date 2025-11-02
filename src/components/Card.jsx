@@ -30,7 +30,7 @@ const Card = ({ image, title, description, to }) => {
 
           {/* Spinner placeholder */}
           {!hasLoaded && (
-            <div className='absolute inset-0 flex items-center justify-center bg-sky-100 dark:bg-gray-900'>
+            <div className='absolute inset-0 flex items-center justify-center bg-sky-100 dark:bg-gray-700'>
               <div className='w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin'></div>
             </div>
           )}
