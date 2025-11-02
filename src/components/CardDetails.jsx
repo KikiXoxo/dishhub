@@ -10,9 +10,9 @@ const CardDetails = ({ image, title, description, to }) => {
   };
 
   return (
-    <div className='flex flex-col lg:flex-row gap-8 bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden p-4 md:p-6 transition'>
+    <div className='flex flex-col xl:flex-row gap-8 bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden p-4 md:p-6 transition'>
       {/* Image */}
-      <div className='flex-shrink-0 w-full lg:w-2/5 relative'>
+      <div className='flex-shrink-0 w-full xl:w-2/5 relative'>
         {!imgLoaded && (
           <div className='absolute inset-0 flex items-center justify-center'>
             <div className='w-10 h-10 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin' />
@@ -30,7 +30,7 @@ const CardDetails = ({ image, title, description, to }) => {
       </div>
 
       {/* Content */}
-      <div className='flex flex-col justify-between lg:w-3/5'>
+      <div className='flex flex-col justify-between xl:w-3/5'>
         <div>
           <h2 className='text-2xl font-bold mb-4'>Description</h2>
           <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
