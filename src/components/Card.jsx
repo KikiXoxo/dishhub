@@ -10,6 +10,9 @@ const Card = ({ image, title, description, to }) => {
     setImgSrc('/login-image.jpg'); // fallback if image from API is unavailable
   };
 
+  const placeholderText =
+    'Explore a curated collection of music styles and moods, perfect for discovering new artists and sounds.';
+
   return (
     <Link to={to} className='block'>
       <div className='bg-sky-50 dark:bg-gray-800 shadow rounded-2xl overflow-hidden transition hover:shadow-lg dark:hover:bg-gray-950'>
@@ -38,11 +41,11 @@ const Card = ({ image, title, description, to }) => {
             {title}
           </h3>
 
-          {description && (
-            <p className='text-sm text-gray-600 dark:text-gray-300 line-clamp-3'>
-              {description}
-            </p>
-          )}
+          <p className='text-sm text-gray-600 dark:text-gray-300 line-clamp-3'>
+            {description && description.trim() !== '' && description !== 'null'
+              ? description
+              : placeholderText}
+          </p>
 
           <div className='mt-3'>
             <span className='text-blue-600 dark:text-blue-400 font-medium hover:underline'>
