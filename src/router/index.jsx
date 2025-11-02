@@ -6,6 +6,7 @@ import Login from '../pages/Login';
 import Discover from '../pages/Discover';
 import { discoverLoader } from '../loaders/discoverLoader';
 import Categories from '../pages/Categories';
+import { categoriesLoader } from '../loaders/categoriesLoader';
 import Ingredients from '../pages/Ingredients';
 import MealDetails from '../pages/MealDetails';
 import CategoryDetails from '../pages/CategoryDetails';
@@ -48,6 +49,7 @@ const router = createBrowserRouter([
           {
             path: 'categories',
             element: <Categories />,
+            loader: categoriesLoader,
           },
           {
             path: 'categories/:category',
