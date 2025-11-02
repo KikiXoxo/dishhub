@@ -9,9 +9,10 @@ import Categories from '../pages/Categories';
 import { categoriesLoader } from '../loaders/categoriesLoader';
 import Ingredients from '../pages/Ingredients';
 import { ingredientsLoader } from '../loaders/ingredientsLoader';
-import MealDetails from '../pages/MealDetails';
 import CategoryDetails from '../pages/CategoryDetails';
 import IngredientDetails from '../pages/IngredientDetails';
+import CategoryMeals from '../pages/CategoryMeals';
+import MealDetails from '../pages/MealDetails';
 
 const router = createBrowserRouter([
   // Redirect route
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
           {
             path: 'categories/:category',
             element: <CategoryDetails />,
+            loader: categoriesLoader,
+          },
+          {
+            path: 'categories/:category/meals',
+            element: <CategoryMeals />,
           },
           {
             path: 'ingredients',
