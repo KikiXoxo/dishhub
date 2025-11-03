@@ -70,6 +70,7 @@ const router = createBrowserRouter([
           {
             path: 'ingredients/:ingredient',
             element: <IngredientDetails />,
+            loader: ingredientsLoader,
           },
           {
             path: 'meals/:id',
