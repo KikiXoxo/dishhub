@@ -41,7 +41,7 @@ const CardDetails = ({ image, title, description, to }) => {
         <div className='mt-6'>
           <Link
             to={to}
-            className='inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition'
+            className='inline-block bg-indigo-950 text-white dark:text-gray-800 dark:bg-indigo-200 px-6 py-2 rounded-lg hover:bg-opacity-95 dark:hover:bg-indigo-300 transition'
           >
             View Meals →
           </Link>

@@ -11,7 +11,7 @@ const MealCard = ({ image, title, to }) => {
 
   return (
     <Link to={to} className='block'>
-      <div className='bg-sky-50 dark:bg-gray-800 shadow rounded-2xl overflow-hidden transition hover:shadow-lg dark:hover:bg-gray-950'>
+      <div className='bg-sky-50 dark:bg-gray-800 shadow rounded-xl overflow-hidden transition hover:shadow-lg dark:hover:bg-gray-950'>
         {/* Image container */}
         <div className='relative w-full h-48 md:h-32 lg:h-48'>
           <img
@@ -36,9 +36,12 @@ const MealCard = ({ image, title, to }) => {
           <h3 className='text-lg font-semibold mb-3 line-clamp-1 text-gray-900 dark:text-gray-100'>
             {title}
           </h3>
+          <p className='text-sm text-gray-600 dark:text-gray-300 line-clamp-2'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
 
-          <div className='mt-auto'>
-            <span className='text-blue-600 dark:text-blue-400 font-medium hover:underline'>
+          <div className='mt-6'>
+            <span className='text-white text-sm px-4 py-2 rounded-lg bg-indigo-950 dark:text-gray-800 dark:bg-indigo-200 hover:opacity-95 dark:hover:bg-indigo-300 transition'>
               View Meal →
             </span>
           </div>

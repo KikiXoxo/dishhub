@@ -12,6 +12,7 @@ import { ingredientsLoader } from '../loaders/ingredientsLoader';
 import CategoryDetails from '../pages/CategoryDetails';
 import IngredientDetails from '../pages/IngredientDetails';
 import CategoryMeals from '../pages/CategoryMeals';
+import { categoryMealsLoader } from '../loaders/categoryMealsLoader';
 import IngredientMeals from '../pages/IngredientMeals';
 import MealDetails from '../pages/MealDetails';
 
@@ -62,6 +63,7 @@ const router = createBrowserRouter([
           {
             path: 'categories/:category/meals',
             element: <CategoryMeals />,
+            loader: categoryMealsLoader,
           },
           {
             path: 'ingredients',
