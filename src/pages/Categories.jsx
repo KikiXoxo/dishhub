@@ -23,7 +23,7 @@ const Categories = () => {
               image={cat.strCategoryThumb}
               title={cat.strCategory}
               description={cat.strCategoryDescription}
-              to={`/categories/${cat.strCategory}`}
+              to={`/categories/${cat.strCategory.toLowerCase()}`}
             />
           ))}
         </GridContainer>

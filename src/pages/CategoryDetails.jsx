@@ -41,7 +41,7 @@ const CategoryDetails = () => {
           image={selectedCategory.strCategoryThumb}
           title={selectedCategory.strCategory}
           description={selectedCategory.strCategoryDescription}
-          to={`/categories/${selectedCategory.strCategory}/meals`}
+          to={`/categories/${selectedCategory.strCategory.toLowerCase()}/meals`}
         />
       </section>
     </div>
