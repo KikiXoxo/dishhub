@@ -42,9 +42,7 @@ const IngredientDetails = () => {
         <CardDetails
           image={selectedIngredient.strThumb}
           title={selectedIngredient.strIngredient}
-          description={
-            selectedIngredient.strDescription || 'No description available.'
-          }
+          description={selectedIngredient.strDescription}
           to={`/ingredients/${encodeURIComponent(
             selectedIngredient.strIngredient.toLowerCase()
           )}/meals`}

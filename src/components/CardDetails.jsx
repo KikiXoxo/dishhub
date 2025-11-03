@@ -23,7 +23,7 @@ const CardDetails = ({ image, title, description, to }) => {
           alt={title}
           onLoad={() => setImgLoaded(true)}
           onError={handleError}
-          className={`w-full h-72 object-cover rounded-xl transition-opacity duration-300 ${
+          className={`w-full h-72 md:h-[450px] lg:h-72 object-cover rounded-xl transition-opacity duration-300 ${
             imgLoaded ? 'opacity-100' : 'opacity-0'
           }`}
         />
@@ -41,7 +41,7 @@ const CardDetails = ({ image, title, description, to }) => {
         <div className='mt-6'>
           <Link
             to={to}
-            className='inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition'
+            className='inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition'
           >
             View Meals →
           </Link>
