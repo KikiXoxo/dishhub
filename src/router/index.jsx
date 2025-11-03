@@ -14,6 +14,7 @@ import IngredientDetails from '../pages/IngredientDetails';
 import CategoryMeals from '../pages/CategoryMeals';
 import { categoryMealsLoader } from '../loaders/categoryMealsLoader';
 import IngredientMeals from '../pages/IngredientMeals';
+import { ingredientMealsLoader } from '../loaders/ingredientMealsLoader';
 import MealDetails from '../pages/MealDetails';
 
 const router = createBrowserRouter([
@@ -78,6 +79,7 @@ const router = createBrowserRouter([
           {
             path: 'ingredients/:ingredient/meals',
             element: <IngredientMeals />,
+            loader: ingredientMealsLoader,
           },
           {
             path: 'meals/:id',
