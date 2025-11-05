@@ -17,6 +17,8 @@ import IngredientMeals from '../pages/IngredientMeals';
 import { ingredientMealsLoader } from '../loaders/ingredientMealsLoader';
 import MealDetails from '../pages/MealDetails';
 import { mealDetailsLoader } from '../loaders/mealDetailsLoader';
+import Search from '../pages/Search';
+import { searchLoader } from '../loaders/searchLoader';
 
 const router = createBrowserRouter([
   // Redirect route
@@ -86,6 +88,11 @@ const router = createBrowserRouter([
             path: 'meals/:id',
             element: <MealDetails />,
             loader: mealDetailsLoader,
+          },
+          {
+            path: '/search',
+            element: <Search />,
+            loader: searchLoader,
           },
         ],
       },
