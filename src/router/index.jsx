@@ -23,6 +23,7 @@ import MealDetails from '../pages/MealDetails';
 import { mealDetailsLoader } from '../loaders/mealDetailsLoader';
 import Search from '../pages/Search';
 import { searchLoader } from '../loaders/searchLoader';
+import NotFound from '../pages/NotFound';
 
 const router = createBrowserRouter([
   // Redirect route
@@ -108,6 +109,8 @@ const router = createBrowserRouter([
             element: <Search />,
             loader: searchLoader,
           },
+
+          { path: '*', element: <NotFound /> },
         ],
       },
     ],
