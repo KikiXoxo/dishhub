@@ -22,8 +22,18 @@ const Navbar = ({ toggleSidebar }) => {
     const query = searchTerm.trim();
 
     const timeout = setTimeout(() => {
-      const url = query ? `/search?q=${encodeURIComponent(query)}` : '/search';
-      navigate(url);
+      if (!query) {
+        // if on /search and there's a ?q param in the URL, remove it
+        if (
+          window.location.pathname === '/search' &&
+          new URLSearchParams(window.location.search).has('q')
+        ) {
+          navigate('/search', { replace: true });
+        }
+        return;
+      }
+
+      navigate(`/search?q=${encodeURIComponent(query)}`);
     }, 500);
 
     return () => clearTimeout(timeout);

@@ -92,7 +92,7 @@ const router = createBrowserRouter([
             loader: mealDetailsLoader,
           },
           {
-            path: '/search',
+            path: 'search',
             element: <Search />,
             loader: searchLoader,
           },
