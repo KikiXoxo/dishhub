@@ -1,4 +1,3 @@
-// pages/Areas.jsx
 import { useLoaderData } from 'react-router-dom';
 import GridContainer from '../components/GridContainer';
 import Card from '../components/Card';
