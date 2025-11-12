@@ -9,6 +9,7 @@ import Categories from '../pages/Categories';
 import { categoriesLoader } from '../loaders/categoriesLoader';
 import Ingredients from '../pages/Ingredients';
 import { ingredientsLoader } from '../loaders/ingredientsLoader';
+import Areas from '../pages/Areas';
 import CategoryDetails from '../pages/CategoryDetails';
 import IngredientDetails from '../pages/IngredientDetails';
 import CategoryMeals from '../pages/CategoryMeals';
@@ -84,6 +85,7 @@ const router = createBrowserRouter([
             element: <IngredientMeals />,
             loader: ingredientMealsLoader,
           },
+          { path: 'areas', element: <Areas /> },
           {
             path: 'meals/:id',
             element: <MealDetails />,
