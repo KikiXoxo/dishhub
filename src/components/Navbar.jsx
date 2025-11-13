@@ -86,7 +86,7 @@ const Navbar = ({ toggleSidebar }) => {
             <PiMagnifyingGlassDuotone className='w-6 h-6 hover:text-gray-950 dark:hover:text-gray-300 transition' />
           </button>
 
-          <button>
+          <button onClick={() => navigate('/favorites')}>
             <PiHeartDuotone className='w-6 h-6 md:w-7 md:h-7 hover:text-gray-950 dark:hover:text-gray-300 transition' />
           </button>
           <button onClick={toggleTheme} className='dark:hidden'>

@@ -1,6 +1,7 @@
 import { GiHamburger, GiDonut, GiCarrot } from 'react-icons/gi';
 import { LiaFlagUsaSolid } from 'react-icons/lia';
 import { RiSearch2Fill } from 'react-icons/ri';
+import { GoHeartFill } from 'react-icons/go';
 
 const sidebarLinks = [
   {
@@ -27,6 +28,11 @@ const sidebarLinks = [
     name: 'Search',
     path: '/search',
     icon: RiSearch2Fill,
+  },
+  {
+    name: 'Favorites',
+    path: '/favorites',
+    icon: GoHeartFill,
   },
 ];
 

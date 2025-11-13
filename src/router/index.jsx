@@ -23,6 +23,7 @@ import MealDetails from '../pages/MealDetails';
 import { mealDetailsLoader } from '../loaders/mealDetailsLoader';
 import Search from '../pages/Search';
 import { searchLoader } from '../loaders/searchLoader';
+import Favorites from '../pages/Favorites';
 import NotFound from '../pages/NotFound';
 
 const router = createBrowserRouter([
@@ -108,6 +109,10 @@ const router = createBrowserRouter([
             path: 'search',
             element: <Search />,
             loader: searchLoader,
+          },
+          {
+            path: 'favorites',
+            element: <Favorites />,
           },
 
           { path: '*', element: <NotFound /> },
