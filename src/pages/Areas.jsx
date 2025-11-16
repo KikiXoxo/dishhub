@@ -10,7 +10,7 @@ const Areas = () => {
     <div className='space-y-12'>
       <section>
         <div className='flex flex-col mb-6'>
-          <h2 className='text-2xl font-bold'>All Areas</h2>
+          <h2 className='text-2xl font-bold'>All Locations</h2>
           <p className='text-gray-500 italic'>
             Explore meals by country or region
           </p>
@@ -21,7 +21,7 @@ const Areas = () => {
             <Card
               key={area.strArea}
               image='/login-image.jpg'
-              title={area.strArea}
+              title={`${area.strArea} Meals`}
               description={`Discover authentic ${area.strArea} dishes and flavors.`}
               to={`/areas/${area.strArea.toLowerCase()}`}
             />

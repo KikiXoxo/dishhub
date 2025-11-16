@@ -1,6 +1,10 @@
-import { GiHamburger, GiDonut, GiCarrot } from 'react-icons/gi';
+import {
+  GiHamburger,
+  GiDonut,
+  GiCarrot,
+  GiMagnifyingGlass,
+} from 'react-icons/gi';
 import { LiaFlagUsaSolid } from 'react-icons/lia';
-import { RiSearch2Fill } from 'react-icons/ri';
 import { GoHeartFill } from 'react-icons/go';
 
 const sidebarLinks = [
@@ -20,7 +24,7 @@ const sidebarLinks = [
     icon: GiCarrot,
   },
   {
-    name: 'Areas',
+    name: 'Locations',
     path: '/areas',
     icon: LiaFlagUsaSolid,
   },

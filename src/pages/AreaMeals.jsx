@@ -9,7 +9,7 @@ const AreaMeals = () => {
   if (!meals.length) {
     return (
       <div className='text-center mt-10 text-gray-600 dark:text-gray-300'>
-        No meals found for this area.
+        No meals found for this location.
       </div>
     );
   }
@@ -21,7 +21,7 @@ const AreaMeals = () => {
           to='/areas'
           className='inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors duration-200'
         >
-          ← Back to Areas
+          ← Back to Locations
         </Link>
       </div>
 
