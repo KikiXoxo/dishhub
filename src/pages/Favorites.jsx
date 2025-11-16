@@ -1,7 +1,9 @@
-import React from 'react';
-
 const Favorites = () => {
-  return <div>Favorites</div>;
+  return (
+    <div className='text-center mt-10 text-gray-600 dark:text-gray-300'>
+      You haven't added any favorites yet.
+    </div>
+  );
 };
 
 export default Favorites;

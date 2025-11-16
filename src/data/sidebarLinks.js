@@ -27,7 +27,7 @@ const sidebarLinks = [
   {
     name: 'Search',
     path: '/search',
-    icon: RiSearch2Fill,
+    icon: GiMagnifyingGlass,
   },
   {
     name: 'Favorites',
