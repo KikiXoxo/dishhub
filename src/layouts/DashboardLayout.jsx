@@ -21,7 +21,7 @@ const DashboardLayout = () => {
       <div className='flex h-full pt-[66px] md:pt-[70px] w-screen'>
         <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
 
-        <div className='flex-1 p-4 md:p-6 md:pr-8 md:pb-8 md:ml-48 lg:ml-64 bg-white dark:text-gray-100 dark:bg-gray-900 min-h-full transition relative '>
+        <div className='flex-1 p-4 md:p-6 md:pr-8 md:pb-8 md:ml-48 lg:ml-64 text-gray-800 bg-white dark:text-gray-100 dark:bg-gray-900 min-h-full transition relative '>
           {/* Display spinner when main content is still loading */}
           {isLoading && (
             <div className='absolute inset-0 z-50 flex items-start justify-center bg-white dark:bg-gray-900'>

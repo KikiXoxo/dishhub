@@ -5,7 +5,11 @@ import { ingredientsLoader } from './ingredientsLoader';
 export const discoverLoader = async () => {
   try {
     // Fetch 3 random meals
-    const randomRequests = [1, 2, 3].map(() => api.get('/random.php'));
+    const randomRequests = Array.from({ length: 3 }, () => {
+      const cacheBust = crypto.randomUUID();
+      return api.get(`/random.php?cb=${cacheBust}`); // To prevent caching issues on some browsers (iOS Safari) making the same meal appear multiple times
+    });
+
     const randomResponses = await Promise.all(randomRequests);
     const featuredMeals = randomResponses.map(r => r.data.meals[0]);
 
