@@ -28,7 +28,7 @@ const MealDetails = () => {
     const measure = meal[`strMeasure${i}`];
     if (ingredient && ingredient.trim() !== '') {
       ingredients.push({
-        name: ingredient, // render with Tailwind 'capitalize' in JSX
+        name: ingredient,
         measure: measure && measure.trim() !== '' ? measure : '—',
       });
     }
@@ -47,7 +47,7 @@ const MealDetails = () => {
       </div>
 
       {/* Header */}
-      <header className='flex flex-col xl:flex-row gap-8 bg-white dark:bg-gray-800 shadow rounded-2xl overflow-hidden p-4 md:p-6'>
+      <header className='flex flex-col xl:flex-row gap-8 bg-white dark:bg-gray-800 shadow rounded-2xl overflow-hidden p-4 md:p-6 transition'>
         {/* Image */}
         <div className='flex-shrink-0 w-full xl:w-2/5 relative'>
           {!imgLoaded && (
@@ -132,7 +132,7 @@ const MealDetails = () => {
           {ingredients.map((item, index) => (
             <li
               key={index}
-              className='flex justify-between bg-sky-50 dark:bg-gray-800 px-4 py-3 rounded-lg shadow-sm text-gray-700 dark:text-gray-200 capitalize'
+              className='flex justify-between bg-sky-50 dark:bg-gray-800 px-4 py-3 rounded-lg shadow-sm text-gray-700 dark:text-gray-200 capitalize transition'
             >
               <span className='line-clamp-1'>{item.name}</span>
               <span className='ml-6 text-gray-500 dark:text-gray-400 font-medium line-clamp-1'>
