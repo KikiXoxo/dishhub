@@ -25,6 +25,7 @@ import Search from '../pages/Search';
 import { searchLoader } from '../loaders/searchLoader';
 import Favorites from '../pages/Favorites';
 import NotFound from '../pages/NotFound';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 const router = createBrowserRouter([
   // Redirect route
@@ -54,61 +55,73 @@ const router = createBrowserRouter([
           }
           return null;
         },
+
         children: [
           {
             path: 'discover',
             element: <Discover />,
             loader: discoverLoader,
+            errorElement: <ErrorBoundary />,
           },
           {
             path: 'categories',
             element: <Categories />,
             loader: categoriesLoader,
+            errorElement: <ErrorBoundary />,
           },
           {
             path: 'categories/:category',
             element: <CategoryDetails />,
             loader: categoriesLoader,
+            errorElement: <ErrorBoundary />,
           },
           {
             path: 'categories/:category/meals',
             element: <CategoryMeals />,
             loader: categoryMealsLoader,
+            errorElement: <ErrorBoundary />,
           },
           {
             path: 'ingredients',
             element: <Ingredients />,
             loader: ingredientsLoader,
+            errorElement: <ErrorBoundary />,
           },
           {
             path: 'ingredients/:ingredient',
             element: <IngredientDetails />,
             loader: ingredientsLoader,
+            errorElement: <ErrorBoundary />,
           },
           {
             path: 'ingredients/:ingredient/meals',
             element: <IngredientMeals />,
             loader: ingredientMealsLoader,
+            errorElement: <ErrorBoundary />,
           },
           {
             path: 'areas',
             element: <Areas />,
             loader: areasLoader,
+            errorElement: <ErrorBoundary />,
           },
           {
             path: 'areas/:area',
             element: <AreaMeals />,
             loader: areaMealsLoader,
+            errorElement: <ErrorBoundary />,
           },
           {
             path: 'meals/:id',
             element: <MealDetails />,
             loader: mealDetailsLoader,
+            errorElement: <ErrorBoundary />,
           },
           {
             path: 'search',
             element: <Search />,
             loader: searchLoader,
+            errorElement: <ErrorBoundary />,
           },
           {
             path: 'favorites',

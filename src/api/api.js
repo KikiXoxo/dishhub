@@ -14,7 +14,6 @@ api.interceptors.response.use(
       alert('Request timed out. Please reload page.'); // simple global fallback
     } else {
       console.error('Something went wrong');
-      alert('Something went wrong. Please reload page.');
     }
     return Promise.reject(error);
   }
