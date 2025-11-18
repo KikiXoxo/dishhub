@@ -51,7 +51,7 @@ const Login = () => {
                     type='email'
                     value={email}
                     readOnly
-                    className='mt-1 block w-full rounded-md border border-gray-300 pl-10 pr-3 py-3 text-gray-900 text-sm shadow-sm dark:bg-gray-950 dark:text-gray-100 dark:border-gray-600 focus:outline-indigo-900'
+                    className='mt-1 block w-full rounded-md border border-gray-300 pl-10 pr-3 py-2 text-gray-900 bg-white text-base shadow-sm dark:bg-gray-950 dark:text-gray-100 dark:border-gray-600 focus:outline-indigo-900'
                   />
                 </div>
               </div>
@@ -70,7 +70,7 @@ const Login = () => {
                     type='password'
                     value={password}
                     readOnly
-                    className='mt-1 block w-full rounded-md border border-gray-300 pl-10 pr-3 py-3 text-gray-900 text-sm shadow-sm focus:outline-indigo-900 dark:bg-gray-950 dark:text-gray-100 dark:border-gray-600'
+                    className='mt-1 block w-full rounded-md border border-gray-300 pl-10 pr-3 py-2 text-gray-900 bg-white text-base shadow-sm focus:outline-indigo-900 dark:bg-gray-950 dark:text-gray-100 dark:border-gray-600'
                   />
                 </div>
                 <p className='text-right text-sm text-indigo-600 dark:text-indigo-300'>
